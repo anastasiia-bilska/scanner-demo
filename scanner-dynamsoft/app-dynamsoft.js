@@ -63,7 +63,7 @@ async function showScaner() {
       };
 
       await scanerObj.setUIElement(document.getElementById("barcode-scaner"));
-      await scanerObj.setResolution(400, 500);
+      await scanerObj.setResolution(600, 500);
       await scanerObj.show();
       document.getElementById("dce-video-container").style.display = "block";
     }
@@ -84,11 +84,6 @@ async function showScaner() {
       scanerObj.destroyContext();
       scanerObj = null;
     }
-
-    // if (!isOnce) {
-    //   scanerCurrent = "old";
-    //   showScaner(true);
-    // }
   }
 }
 
