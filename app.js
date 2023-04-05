@@ -115,5 +115,7 @@ function scanerResult(code) {
 function redirect() {
   if (channel === "viber") {
     window.location.replace(decodeURIComponent("https://apt911.co/01ee6a"));
+  } else if (channel === 'telegram') {
+    window.Telegram.WebApp.close();
   }
 }
