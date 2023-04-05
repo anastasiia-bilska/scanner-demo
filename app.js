@@ -79,40 +79,46 @@ function scanerResult(code) {
     lastCode = null;
   }, 1500);
 
+  setTimeout(redirect, 500);
+
   return;
 
   // отправляем данные на api
-  // let xhr = new XMLHttpRequest();
-  // xhr.open('POST', {{{msg.serverUrl}}}'/QRres', true);
-  // xhr.setRequestHeader('Content-Type', 'application/json');
+//   let xhr = new XMLHttpRequest();
+//   xhr.open('POST', {{{msg.serverUrl}}}'/QRres', true);
+//   xhr.setRequestHeader('Content-Type', 'application/json');
 
-  // if (channel === "telegram") {
-  //   xhr.send(
-  //     JSON.stringify({
-  //       text: code,
-  //       channel,
-  //       phone,
-  //       user: window.Telegram.WebApp.initDataUnsafe.user,
-  //     })
-  //   );
-  // } else if (channel === 'viber') {
-  //   xhr.send(
-  //     JSON.stringify({
-  //       text: code,
-  //       channel,
-  //       phone,
-  //     })
-  //   );
-  // }
+//   if (channel === "telegram") {
+//     xhr.send(
+//       JSON.stringify({
+//         text: code,
+//         channel,
+//         phone,
+//         user: window.Telegram.WebApp.initDataUnsafe.user,
+//       })
+//     );
+//   } else if (channel === 'viber') {
+//     xhr.send(
+//       JSON.stringify({
+//         text: code,
+//         channel,
+//         phone,
+//       })
+//     );
+//   }
 
-  // редирект
-  // setTimeout(redirect, 500);
+//   // редирект
+//   setTimeout(redirect, 500);
 }
 
 function redirect() {
-  if (channel === "viber") {
-    window.location.replace(decodeURIComponent("https://apt911.co/01ee6a"));
-  } else if (channel === 'telegram') {
+  if (channel === "telegram") {
     window.Telegram.WebApp.close();
+  } else {
+    window.location.replace(decodeURIComponent("https://apt911.co/01ee6a"));
   }
+  
+  // if (channel === "viber") {
+  //   window.location.replace(decodeURIComponent("https://apt911.co/01ee6a"));
+  // } 
 }
