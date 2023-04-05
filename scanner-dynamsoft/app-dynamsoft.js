@@ -63,7 +63,7 @@ async function showScaner() {
       };
 
       await scanerObj.setUIElement(document.getElementById("barcode-scaner"));
-      await scanerObj.setResolution(600, 600);
+      await scanerObj.setResolution(400, 300);
       await scanerObj.show();
       document.getElementById("dce-video-container").style.display = "block";
     }
@@ -93,7 +93,7 @@ function scanerResult(code) {
     return;
   }
 
-  alert("Відскановано: " + code);
+  alert("QR успішно відскановано ✅\n Перевіряємо інформацію ⏳");
 
   lastCode = code;
 
