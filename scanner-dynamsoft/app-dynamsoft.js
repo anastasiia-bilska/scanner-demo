@@ -63,7 +63,7 @@ async function showScaner() {
       };
 
       await scanerObj.setUIElement(document.getElementById("barcode-scaner"));
-      await scanerObj.setResolution(300, 300);
+      await scanerObj.setResolution(400, 400);
       await scanerObj.show();
       document.getElementById("dce-video-container").style.display = "block";
     }
