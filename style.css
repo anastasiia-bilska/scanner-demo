@@ -40,7 +40,7 @@ a {
 
 .start {
   padding: 0 25px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .start__title {
@@ -57,18 +57,17 @@ a {
 }
 
 .scanner {
-  min-height: 245px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .reader-wrap {
   display: block !important;
-  min-height: 245px;
+  min-height: 270px;
   margin-bottom: 10px;
 }
 
 .reader {
-  width: 290px;
+  width: 270px;
   margin: 0 auto;
 }
 
@@ -123,7 +122,7 @@ a {
 }
 
 .unsuccessful__title {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   text-align: center;
 }
 
@@ -156,7 +155,7 @@ a {
   background-color: #e68f88;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   .header {
     margin-bottom: 15px;
   }
@@ -191,7 +190,7 @@ a {
     width: 245px;
   }
 
-  .reader__wrap {
+  .reader-wrap {
     min-height: 245px;
   }
 }
