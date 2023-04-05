@@ -12,7 +12,6 @@ let scanerObj, lastCode;
 
 // запуск сканера
 async function showScaner() {
-  // document.getElementById("loader-wrapper").classList.remove("hide");
   console.log("START OLD");
   lastCode = null;
 
@@ -34,8 +33,6 @@ async function showScaner() {
       scanerObj = new Html5Qrcode("reader", {
         experimentalFeatures: { useBarCodeDetectorIfSupported: false },
       });
-
-      // document.getElementById("loader-wrapper").classList.add("hide");
 
       scanerObj
         .start(
