@@ -74,7 +74,7 @@ function scanerResult(code) {
     return;
   }
 
-  alert("Відскановано: " + code);
+  alert("QR успішно відскановано ✅\n Перевіряємо інформацію ⏳");
 
   lastCode = code;
 
@@ -104,7 +104,6 @@ function scanerResult(code) {
   //       text: code,
   //       channel,
   //       phone,
-  //       user: window.Telegram.WebApp.initDataUnsafe.user,
   //     })
   //   );
   // }

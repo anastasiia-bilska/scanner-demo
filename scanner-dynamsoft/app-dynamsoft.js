@@ -1,5 +1,12 @@
-window.Telegram.WebApp.expand();
+"use strict";
 
+const urlParams = new URLSearchParams(window.location.search);
+const channel = urlParams.get("channel");
+const phone = urlParams.get("phone");
+
+if (channel === "telegram") {
+  window.Telegram.WebApp.expand();
+}
 // trial лицензия на Dynamsoft Barcode Scanner
 let scanerNewLicense =
   "DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAxNjc5OTc0LVRYbFhaV0pRY205cVgyUmljZyIsIm9yZ2FuaXphdGlvbklEIjoiMTAxNjc5OTc0IiwiY2hlY2tDb2RlIjotNDEzNDcxMDQ3fQ==";
@@ -55,16 +62,13 @@ async function showScaner() {
         await scanerObj.updateRuntimeSettings(rs);
       };
 
-      await scanerObj.setUIElement(
-        document.getElementById("barcode-scaner")
-      );
+      await scanerObj.setUIElement(document.getElementById("barcode-scaner"));
 
       await scanerObj.show();
       document.getElementById("dce-video-container").style.display = "block";
     }
 
     document.getElementById("dce-bg-loading").classList.add("hide");
-
   } catch (e) {
     let err;
 
@@ -136,5 +140,6 @@ function scanerResult(code) {
 function redirect() {
   if (channel === "viber") {
     window.location.replace(decodeURIComponent("https://apt911.co/01ee6a"));
+  } else if (channel === "telegram") {
   }
 }
