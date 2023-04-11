@@ -7,6 +7,8 @@ const urlParams = new URLSearchParams(window.location.search);
 const channel = sessionStorage.getItem("channel");
 // sessionStorage.setItem("key", variable);
 
+window.console.log(channel);
+
 if (channel === 'telegram') {
   window.Telegram.WebApp.expand();
 }
