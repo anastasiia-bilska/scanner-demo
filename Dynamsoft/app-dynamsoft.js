@@ -154,5 +154,5 @@ function redirect() {
     window.location.replace(decodeURIComponent('{{payload.redirectLink}}'));
   }
 
-  window.location.replace(decodeURIComponent("https://apt911.co/8bfdd4"));
+  window.location.replace(decodeURIComponent('https://apt911.co/8bfdd4'));
 }
