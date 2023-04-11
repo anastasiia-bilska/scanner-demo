@@ -6,14 +6,6 @@
   box-sizing: border-box;
 }
 
-html {
-  min-height: 100vh;
-}
-
-body {
-  min-height: 100vh;
-}
-
 html,
 body,
 h1,
@@ -164,7 +156,7 @@ a {
 .switcher {
   display: block;
   padding: 10px 20px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
 
   width: 60%;
 

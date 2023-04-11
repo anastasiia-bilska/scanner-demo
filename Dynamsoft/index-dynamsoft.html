@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сканер штрих кодів | Аптека 9-1-1</title>
-    <link rel="stylesheet" href="style-dynamsoft.css" />
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-javascript-barcode@9.6.2/dist/dbr.js"></script>
-    <script src="app-dynamsoft.js" defer></script>
+    <!-- <style>{{{payload.style}}}</style> -->
+    <link rel="stylesheet" href="style-dynamsoft.css">
   </head>
   <body onload="showScaner()">
     <header class="header">
       <img
-        src="https://gist.githubusercontent.com/anastasiia-bilska/0d94ea36c40f9fb65109a344e9799eac/raw/dad9092157ae6b7a4c61d672eeb32c8520a55f23/logo-9-1-1-white.svg"
+        src="/img/logo.svg"
         alt="Логотип - Аптека 9-1-1"
         class="header__logo"
       />
@@ -57,7 +57,11 @@
         <h2 class="unsuccessful__title">Не виходить?</h2>
         <p class="unsuccessful__instruction">Спробуйте інший сканер 👇</p>
       </div>
-      <a class="switcher" href="/index.html">Змінити сканер</a>
+      <!-- <a class="switcher" href="/dynamsoft">Змінити сканер</a> -->
+      <a class="switcher" href="QRcode/index.html">Змінити сканер</a>
     </footer>
+
+    <!-- <script>{{{payload.script}}}</script> -->
+    <script src="app-dynamsoft.js"></script>
   </body>
 </html>

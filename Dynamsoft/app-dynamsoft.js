@@ -102,30 +102,30 @@ function scanerResult(code) {
   }, 1500);
 
   //отправляем данные на api
-  let xhr = new XMLHttpRequest();
-  const codeInfo = JSON.parse(code);
+  // let xhr = new XMLHttpRequest();
+  // const codeInfo = JSON.parse(code);
 
-  xhr.open('POST', {{{msg.serverUrl}}}'/QRres', true);
-  xhr.setRequestHeader('Content-Type', 'application/json');
+  // xhr.open('POST', {{{msg.serverUrl}}}'/QRres', true);
+  // xhr.setRequestHeader('Content-Type', 'application/json');
 
-    if (channel === 'telegram') {
-      xhr.send(
-        JSON.stringify({
-          text: code,
-          channel,
-          phone,
-          user: window.Telegram.WebApp.initDataUnsafe.user,
-        })
-      );
-    } else if (channel === 'viber') {
-      xhr.send(
-        JSON.stringify({
-          text: code,
-          channel,
-          phone,
-        })
-      );
-    }
+  //   if (channel === 'telegram') {
+  //     xhr.send(
+  //       JSON.stringify({
+  //         text: code,
+  //         channel: `{{{payload.channel}}}`,
+  //         phone: `{{{payload.phone}}}`,
+  //         user: window.Telegram.WebApp.initDataUnsafe.user,
+  //       })
+  //     );
+  //   } else if (channel === 'viber') {
+  //     xhr.send(
+  //       JSON.stringify({
+  //         text: code,
+  //         channel: `{{{payload.channel}}}`,
+  //         phone: `{{{payload.phone}}}`,
+  //       })
+  //     );
+  //   }
   
     // отправляем данные на api
     // let xhr = new XMLHttpRequest();

@@ -79,31 +79,31 @@ function scanerResult(code) {
     lastCode = null;
   }, 1500);
 
-  // отправляем данные на api
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', {{{msg.serverUrl}}}'/QRres', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
+  // отправляем данные на api - новий
+    // let xhr = new XMLHttpRequest();
+    // xhr.open('POST', {{{msg.serverUrl}}}'/QRres', true);
+    // xhr.setRequestHeader('Content-Type', 'application/json');
 
-    if (channel === 'telegram') {
-      xhr.send(
-        JSON.stringify({
-          text: code,
-          channel,
-          phone,
-          user: window.Telegram.WebApp.initDataUnsafe.user,
-        })
-      );
-    } else if (channel === 'viber') {
-      xhr.send(
-        JSON.stringify({
-          text: code,
-          channel,
-          phone,
-        })
-      );
-    }
+    // if (channel === 'telegram') {
+    //   xhr.send(
+    //     JSON.stringify({
+    //       text: code,
+    //       channel: `{{{payload.channel}}}`,
+    //       phone: `{{{payload.phone}}}`,
+    //       user: window.Telegram.WebApp.initDataUnsafe.user,
+    //     })
+    //   );
+    // } else if (channel === 'viber') {
+    //   xhr.send(
+    //     JSON.stringify({
+    //       text: code,
+    //       channel: `{{{payload.channel}}}`,
+    //       phone: `{{{payload.phone}}}`,
+    //     })
+    //   );
+    // }
 
-    // отправляем данные на api
+    // отправляем данные на api - початковий
     // let xhr = new XMLHttpRequest();
     // xhr.open("POST", {{{msg.serverUrl}}}'/QRres', true);
     // xhr.setRequestHeader('Content-Type', 'application/json');

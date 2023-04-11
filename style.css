@@ -183,7 +183,6 @@ a {
 
   .unsuccessful__title {
     font-size: 20px;
-    margin-bottom: 4px;
   }
 
   .reader {
@@ -192,5 +191,36 @@ a {
 
   .reader-wrap {
     min-height: 245px;
+  }
+}
+
+@media (max-height: 660px) {
+  .header {
+    margin-bottom: 15px;
+  }
+
+  .header__logo {
+    width: 150px;
+  }
+
+  .start__instruction {
+    font-size: 16px;
+  }
+
+  .warning {
+    padding: 0 25px;
+    font-size: 13px;
+  }
+
+  .unsuccessful {
+    margin-bottom: 10px;
+  }
+
+  .unsuccessful__title {
+    margin-bottom: 0;
+  }
+
+  .unsuccessful__instruction {
+    font-size: 16px;
   }
 }
