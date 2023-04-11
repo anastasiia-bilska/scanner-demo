@@ -1,8 +1,14 @@
 'use strict';
 
 const urlParams = new URLSearchParams(window.location.search);
-const channel = urlParams.get('channel');
+let channel = urlParams.get('channel');
 const phone = urlParams.get('phone');
+
+if (channel) {
+  sessionStorage.setItem("channel", channel);
+} else {
+  channel = sessionStorage.getItem("channel");
+}
 
 if (channel === 'telegram') {
   window.Telegram.WebApp.expand();
