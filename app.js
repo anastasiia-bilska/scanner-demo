@@ -4,6 +4,8 @@ const urlParams = new URLSearchParams(window.location.search);
 let channel = urlParams.get('channel');
 const phone = urlParams.get('phone');
 
+channel = 123;
+
 if (channel) {
   sessionStorage.setItem("channel", channel);
 } else {
