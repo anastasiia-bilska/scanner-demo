@@ -1,5 +1,5 @@
 :root {
-  --main-color: #cd3226;
+  --main-color: #a82420;
 }
 
 * {
@@ -16,6 +16,10 @@ a {
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #4d4d4d;
+}
+
+body {
+  background-color: #fff;
 }
 
 .container {
@@ -107,21 +111,6 @@ a {
   position: absolute;
   z-index: 1;
   border: none;
-}
-
-.warning {
-  font-size: 14px;
-  padding: 0 40px;
-  text-align: center;
-}
-
-.warning__star {
-  color: var(--main-color);
-  font-size: 20px;
-}
-
-.warning__important {
-  color: var(--main-color);
 }
 
 .dce-scanlight {
@@ -222,5 +211,31 @@ a {
   .unsuccessful__title {
     font-size: 20px;
     margin-bottom: 4px;
+  }
+}
+
+@media (max-height: 660px) {
+  .header {
+    margin-bottom: 15px;
+  }
+
+  .header__logo {
+    width: 150px;
+  }
+
+  .start__instruction {
+    font-size: 16px;
+  }
+
+  .unsuccessful {
+    margin-bottom: 10px;
+  }
+
+  .unsuccessful__title {
+    margin-bottom: 0;
+  }
+
+  .unsuccessful__instruction {
+    font-size: 16px;
   }
 }

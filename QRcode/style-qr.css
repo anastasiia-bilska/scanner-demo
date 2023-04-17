@@ -1,5 +1,5 @@
 :root {
-  --main-color: #cd3226;
+  --main-color: #a82420;
 }
 
 * {
@@ -22,12 +22,8 @@ body {
   background-color: #fff;
 }
 
-main {
-  min-height: 460px;
-}
-
 .hide {
-  display: none !important;
+  display: none;
 }
 
 .container {
@@ -35,7 +31,7 @@ main {
 }
 
 .header {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   background-color: var(--main-color);
 }
 
@@ -55,39 +51,17 @@ main {
   margin-bottom: 16px;
   text-align: center;
 
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 700;
 }
 
 .start__instruction {
-  font-size: 23px;
+  font-size: 20px;
   text-align: center;
-}
-
-.dls-license-mask {
-  display: none !important;
 }
 
 .scanner {
   margin-bottom: 25px;
-}
-
-.app {
-  /* margin-bottom: 38px; */
-  height: 270px;
-  max-height: 100%;
-  margin-bottom: 23px;
-}
-
-.barcode-scaner {
-  position: relative !important;
-  width: 100%;
-  height: 100%;
-}
-
-.dce-bg-loading {
-  position: relative;
-  height: 220px;
 }
 
 .reader-wrap {
@@ -132,23 +106,6 @@ main {
   }
 }
 
-.dce-scanarea {
-  position: absolute;
-  z-index: 1;
-  border: none;
-}
-
-.dce-scanlight {
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 50%;
-  box-shadow: rgb(254, 142, 20) 0px 0px 2vw 1px;
-  background: rgb(254, 142, 20);
-  animation: 3s infinite dce-scanlight;
-  user-select: none;
-}
-
 .unsuccessful {
   margin-bottom: 20px;
 }
@@ -187,29 +144,9 @@ main {
   background-color: #e68f88;
 }
 
-.dce-video-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: none;
-}
-
-.footer {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer__link {
-  color: var(--main-color);
-}
-
 @media (max-width: 380px) {
-  .app {
-    height: 245px;
-  }
-
-  main {
-    min-height: 400px;
+  .header {
+    margin-bottom: 15px;
   }
 
   .start {
@@ -247,12 +184,12 @@ main {
 }
 
 @media (max-height: 660px) {
-  .app {
-    height: 245px;
+  .header {
+    margin-bottom: 15px;
   }
 
-  main {
-    min-height: 400px;
+  .header__logo {
+    width: 150px;
   }
 
   .start__instruction {
